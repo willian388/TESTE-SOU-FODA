@@ -30,8 +30,10 @@
         background-blend-mode: darken;
       }
       nav {
-        background-color: #BF0A0A;
+        background-color: black;
         color: white;
+        font-size: 14px;
+        
         
       }
       .fsec {
@@ -104,11 +106,42 @@
 
   </head>
   <body>
-    <nav class="navbar justify-content-center text-center">
+
+<nav class="navbar justify-content-center text-center">
       <span class="lead">
-        <i class="fas fa-exclamation-triangle mr-2"></i>⚠️AVISO: Este vídeo ficará disponível apenas até o dia <span id="dia"></span> de <span id="mes"></span>
+       Você e algumas pessoas próximas de <b><span id="address" style="color: #FF007F;"></span></b> foram selecionadas para participar deste programa</span>
       </span>
     </nav>
+
+
+<!--INÍCIO DO SCRIPT-->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>$.get("https://ipinfo.io/json", function (response) { $("#address").html(response.city);
+}, "json");
+</script>
+
+<style>
+    .cidade-p{
+        color: #fff;
+        font-size: 14px;
+        line-height: 1.2rem;
+        text-align: center;
+        margin-top: 14px;
+        
+    }
+    
+    @media (max-width: 768px){
+        .cidade-p {
+            font-size: 14px;
+            margin: 12px 20px;
+            line-height: 18px;
+        }
+    }
+</style>
+
+<!--FIM DO SCRIPT-->
     
     <header class="py-4">
       <div class="container">
