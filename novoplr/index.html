@@ -812,12 +812,18 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 <script>
-    $(document).ready(function() { 
-        setTimeout(() => {
-            $('.hide').fadeIn('slow');
-        }, 0 * 0) 
-    })
-    
+    const minutes = 20;
+    const seconds = 0;
+
+    const conversionMinutes = minutes * 60000;
+    const conversionSeconds = seconds * 1000;
+
+    const fullTime = conversionSeconds + conversionMinutes;
+      $(document).ready(function() {
+            setTimeout(function() { 
+                $('.hide').show(); 
+        }, fullTime); 
+      })
 </script>   </div>
         </div>
           </div>
